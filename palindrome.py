@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-original=int(input())
-lastnum=int(original)
+""" Find palindrome of given number """
+import sys
 
-def checkpalin(s):
-    s=str(s)
-    if(s==s[::-1]):
-        print(s, "is palindrome of", original)
-        quit();
+STARTNUM=int(input())
+LASTNUM=int(STARTNUM)
+
+def checkpalin(lastnum_str):
+    """ Takes one number and checks if it is a palindrome """
+    lastnum_str=str(lastnum_str)
+    if lastnum_str==lastnum_str[::-1]:
+        print(lastnum_str, "is palindrome of", STARTNUM)
+        sys.exit()
     else:
-        print(s)
+        print(lastnum_str)
         return False
 
-def add(num1,num2):
-    sum=int(num1+num2)
-    return sum
-
 while True:
-    checkpalin(lastnum)
-    lastnum_str=str(lastnum)
-    lastnum_inv=lastnum_str[::-1]
-    lastnum=add(lastnum,int(lastnum_inv))
+    checkpalin(LASTNUM)
+    LASTNUM_STR=str(LASTNUM)
+    LASTNUM_INV=LASTNUM_STR[::-1]
+    LASTNUM=LASTNUM+int(LASTNUM_INV)
