@@ -34,15 +34,15 @@ def main():
 
     for i in range(max_iter):
         if is_palindrome(last_num):
-            print(f"{last_num} is a palindrome of {start_num}")
+            print(f"{last_num} is a palindrome of {start_num} (Found after {i} iterations)")
             sys.exit()
 
-        print(last_num)
+        #print(last_num)
         last_num_str = str(last_num)
         last_num_inv = last_num_str[::-1]
         last_num += int(last_num_inv)
 
-    print(f"Maximum iterations ({max_iter}) reached without finding a palindrome.")
+    print(f"Maximum iterations ({max_iter}) reached without finding a palindrome for {start_num}.")
 
 
 if __name__ == '__main__':
